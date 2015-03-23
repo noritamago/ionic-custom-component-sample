@@ -1,0 +1,9 @@
+{
+  "name": "ionic-starter-blank",
+  "version": "1.0.0",
+  "description": "This is an addon starter template for the [Ionic Framework](http://ionicframework.com/).",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-webserver": "^0.9.0"
+  }
+}
