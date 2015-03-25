@@ -7,8 +7,8 @@ function headerShrink($document) {
     var fadeAmt;
 
     var shrink = function(header, content, amt, max) {
-        amt = Math.min(44, amt);
-        fadeAmt = 1 - amt / 44;
+        amt = Math.min(24, amt);
+        fadeAmt = 1 - amt / 24;
         ionic.requestAnimationFrame(function() {
             header.style[ionic.CSS.TRANSFORM] = 'translate3d(0, -' + amt + 'px, 0)';
             for(var i = 0, j = header.children.length; i < j; i++) {
