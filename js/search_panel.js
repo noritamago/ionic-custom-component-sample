@@ -21,19 +21,12 @@ function searchPanel(ionic, $rootScope) {
         setY : function(y) {
             this.el.style[ionic.CSS.TRANSFORM] = 'translate3d(0px,'+ y + 'px, 0)';
         },
-        setZIndex : function(index) {
-            if(!this.el.style.zIndex) {
-                this.el.style.zIndex = index;
-            }
-            console.log(this.el.style.zIndex);
-        },
         setTransform : function() {
             this.el.style[ionic.CSS.TRANSITION] = '-webkit-transform '+this.panelAnimDuration+'s ease';
         },
         toggle : function() {
             var self = this;
             ionic.requestAnimationFrame(function(){
-                self.setZIndex(1);
                 self.setTransform();
                 if(self.isOpen) {
                     self.setY(self.dstY);
