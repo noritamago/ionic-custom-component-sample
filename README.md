@@ -11,6 +11,9 @@ the panel is automatically hidden.
 
 ![image](https://raw.githubusercontent.com/wiki/noritamago/ionic-custom-component-sample/images/image.png)
 
+### Demo
+ * [plnkr](http://embed.plnkr.co/uNEijw6pLYuHEMxKAiTx/preview)
+
 ### Usage
 
  * input field, search box, etc... are enclosed with ```<search-panel>``` directive
