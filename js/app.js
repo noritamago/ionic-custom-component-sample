@@ -5,7 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', [
   'ionic',
-   'starter.directive'
+  'starter.directive',
+  'starter.controller'
 ])
 
 .run(function($ionicPlatform) {
@@ -19,4 +20,32 @@ angular.module('starter', [
       StatusBar.styleDefault();
     }
   });
-})
+});
+
+angular.module('starter.controller',[])
+    .controller('AppController',AppController);
+
+AppController.$inject = ['$scope','searchPanelDelegate'];
+
+function AppController($scope,searchPanelDelegate){
+  var vm = this;
+  vm.keyword = '';
+  vm.clearKeyword = function() {
+    vm.keyword = '';
+  };
+  vm.toggle = function() {
+    searchPanelDelegate.togglePanel();
+  },
+  vm.items = [
+    { text: 'option1', checked: false},
+    { text: 'option2', checked: false},
+  ];
+  vm.condStr = '';
+  vm.change = function() {
+    vm.condStr = '';
+    angular.forEach(vm.items,function(item){
+      if(item.checked)
+        vm.condStr += ' ,' + item.text;
+    });
+  };
+}

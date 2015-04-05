@@ -3,9 +3,51 @@
 
 .bar-header {
     height: 48px !important;
+    z-index: 3;
 }
+
 
 
 .bar-header > * {
     margin-top: 1px !important;
+}
+
+
+.searchpanel-border {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    box-shadow: 0 3px 2px -2px #777;
+    margin-top: 44px;
+    position: absolute;
+    width : 100%;
+    z-index: 2;
+}
+
+.searchpanel-border:before {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+    width: 0;
+    height: 0;
+    border-top: 11px solid #ddd;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+}
+.searchpanel-border:after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    margin-left: -11px;
+    width: 0;
+    height: 0;
+    border-top: 11px solid #fff;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+}
+
+ion-content {
+    z-index : -1;
 }
